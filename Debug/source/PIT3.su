@@ -1,0 +1,11 @@
+../source/PIT3.c:11:6:write	24	static
+../source/PIT3.c:16:5:read	24	static
+../source/PIT3.c:20:6:shortDelay	16	static
+../source/PIT3.c:25:6:readModifyWrite	24	static
+../source/PIT3.c:30:6:setupLed	8	static
+../source/PIT3.c:49:6:initButtonSW3	8	static
+../source/PIT3.c:65:6:initButtonSW2	8	static
+../source/PIT3.c:76:6:blinkLight	24	static
+../source/PIT3.c:91:6:toggleOnOffSW3	16	static
+../source/PIT3.c:108:6:longPressOff	8	static
+../source/PIT3.c:113:5:main	24	static
