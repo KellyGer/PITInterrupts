@@ -61,7 +61,9 @@ void initPIT(){
 // NVICIABR1 = 16
 // NVICIPR12: (8*(IRQ mod 4) + 4 = 4 => bitfield [7:4]
 
-
+// Enable the PIT0 interrupt in the  ISER (Interrupt set enable register)
+// write(0x00000100, 1 << 16); //  NVICISER1 = (IRQ%32) = (48 % 32) = 16
+// This is not allowed (use PIT0_IRQn)
 
 
 void PIT0_IRQHandler(){
@@ -76,13 +78,8 @@ int main(void)
 
 	setupLed();
 	initPIT();
-
-	// Enable the PIT0 interrupt in the  ISER (Interrupt set enable register)
-	// write(0x00000100, 1 << 16); //  NVICISER1 = (IRQ%32) = (48 % 32) = 16
-	// This is not allowed (use PIT0_IRQn)
-
-
 	NVIC_EnableIRQ(PIT0_IRQn);
+
 
 	/* Init board hardware. */
 	BOARD_InitBootPins();
